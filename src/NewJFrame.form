@@ -64,7 +64,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="questionOneAnswerFourLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="answerOneTextField" pref="142" max="32767" attributes="0"/>
+                          <Component id="answerOneTextField" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -115,7 +115,7 @@
                                           <Component id="answerFiveTextField" min="-2" pref="144" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="23" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="resultLabel" min="-2" pref="53" max="-2" attributes="0"/>
@@ -226,22 +226,22 @@
         </Component>
         <Component class="javax.swing.JLabel" name="questionOneAnswerOneLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="A. 12.5"/>
+            <Property name="text" type="java.lang.String" value="1. 12.5"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="questionOneAnswerTwoLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="B. 13"/>
+            <Property name="text" type="java.lang.String" value="2. 13"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="questionOneAnswerThreeLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="C. 13.5"/>
+            <Property name="text" type="java.lang.String" value="3. 13.5"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="questionOneAnswerFourLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="D. 15"/>
+            <Property name="text" type="java.lang.String" value="4. 15"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="answerOneTextField">
@@ -251,12 +251,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="questionTwoAnswerOneLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="A. 8"/>
+            <Property name="text" type="java.lang.String" value="1. 8"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="questionTwoAnswerTwoLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="B. 16"/>
+            <Property name="text" type="java.lang.String" value="2. 16"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="answerTwoTextField">
@@ -266,17 +266,17 @@
         </Component>
         <Component class="javax.swing.JLabel" name="questionThreeAnswerOneLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="A. 40"/>
+            <Property name="text" type="java.lang.String" value="1. 40"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="questionThreeAnswerTwoLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="B. 45"/>
+            <Property name="text" type="java.lang.String" value="2. 45"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="questionThreeAnswerThreeLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="C. 50"/>
+            <Property name="text" type="java.lang.String" value="3. 50"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="answerThreeTextField">
@@ -286,17 +286,17 @@
         </Component>
         <Component class="javax.swing.JLabel" name="questionFourAnswerOneLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Yes."/>
+            <Property name="text" type="java.lang.String" value="1. Yes."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="questionFourAnswerTwoLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="No."/>
+            <Property name="text" type="java.lang.String" value="2. No."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="questionFourAnswerThreeLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Pi?"/>
+            <Property name="text" type="java.lang.String" value="3. Pi?"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="answerFourTextField">
@@ -306,22 +306,22 @@
         </Component>
         <Component class="javax.swing.JLabel" name="questionFiveAnswerOneLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="A."/>
+            <Property name="text" type="java.lang.String" value="1."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="questionFiveAnswerTwoLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="B."/>
+            <Property name="text" type="java.lang.String" value="2."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="questionFiveAnswerThreeLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="C."/>
+            <Property name="text" type="java.lang.String" value="3."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="questionFiveAnswerFourLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="D."/>
+            <Property name="text" type="java.lang.String" value="4."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="answerFiveTextField">
@@ -333,6 +333,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Enter answers"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enterButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="resultLabel">
           <Properties>

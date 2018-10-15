@@ -77,49 +77,54 @@ public class NewJFrame extends javax.swing.JFrame {
 
         fifthQuestionLabel.setText("Guess the answer.");
 
-        questionOneAnswerOneLabel.setText("A. 12.5");
+        questionOneAnswerOneLabel.setText("1. 12.5");
 
-        questionOneAnswerTwoLabel.setText("B. 13");
+        questionOneAnswerTwoLabel.setText("2. 13");
 
-        questionOneAnswerThreeLabel.setText("C. 13.5");
+        questionOneAnswerThreeLabel.setText("3. 13.5");
 
-        questionOneAnswerFourLabel.setText("D. 15");
+        questionOneAnswerFourLabel.setText("4. 15");
 
         answerOneTextField.setText("Replace text with answer.");
 
-        questionTwoAnswerOneLabel.setText("A. 8");
+        questionTwoAnswerOneLabel.setText("1. 8");
 
-        questionTwoAnswerTwoLabel.setText("B. 16");
+        questionTwoAnswerTwoLabel.setText("2. 16");
 
         answerTwoTextField.setText("Replace text with answer.");
 
-        questionThreeAnswerOneLabel.setText("A. 40");
+        questionThreeAnswerOneLabel.setText("1. 40");
 
-        questionThreeAnswerTwoLabel.setText("B. 45");
+        questionThreeAnswerTwoLabel.setText("2. 45");
 
-        questionThreeAnswerThreeLabel.setText("C. 50");
+        questionThreeAnswerThreeLabel.setText("3. 50");
 
         answerThreeTextField.setText("Replace text with answer.");
 
-        questionFourAnswerOneLabel.setText("Yes.");
+        questionFourAnswerOneLabel.setText("1. Yes.");
 
-        questionFourAnswerTwoLabel.setText("No.");
+        questionFourAnswerTwoLabel.setText("2. No.");
 
-        questionFourAnswerThreeLabel.setText("Pi?");
+        questionFourAnswerThreeLabel.setText("3. Pi?");
 
         answerFourTextField.setText("Replace text with answer.");
 
-        questionFiveAnswerOneLabel.setText("A.");
+        questionFiveAnswerOneLabel.setText("1.");
 
-        questionFiveAnswerTwoLabel.setText("B.");
+        questionFiveAnswerTwoLabel.setText("2.");
 
-        questionFiveAnswerThreeLabel.setText("C.");
+        questionFiveAnswerThreeLabel.setText("3.");
 
-        questionFiveAnswerFourLabel.setText("D.");
+        questionFiveAnswerFourLabel.setText("4.");
 
         answerFiveTextField.setText("Replace text with answer.");
 
         enterButton.setText("Enter answers");
+        enterButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enterButtonActionPerformed(evt);
+            }
+        });
 
         resultLabel.setFont(new java.awt.Font("TimelessTCYLig", 0, 14)); // NOI18N
         resultLabel.setForeground(new java.awt.Color(0, 255, 0));
@@ -145,7 +150,7 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(questionOneAnswerFourLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(answerOneTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE))
+                        .addComponent(answerOneTextField))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -190,7 +195,7 @@ public class NewJFrame extends javax.swing.JFrame {
                                         .addComponent(questionFiveAnswerFourLabel)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(answerFiveTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 23, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(resultLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -257,6 +262,39 @@ public class NewJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void enterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterButtonActionPerformed
+        //Variables        
+        double finalPercent;
+        double finalScore = 0;
+        int firstAnswer,secondAnswer,thirdAnswer,fourthAnswer,fifthAnswer,randomNumber;
+        //Values of variables
+        firstAnswer = Integer.parseInt(answerOneTextField.getText());
+        secondAnswer = Integer.parseInt(answerTwoTextField.getText());
+        thirdAnswer = Integer.parseInt(answerThreeTextField.getText());
+        fourthAnswer = Integer.parseInt(answerFourTextField.getText());
+        fifthAnswer = Integer.parseInt(answerFiveTextField.getText());
+        randomNumber = (int)Math.round(Math.random()*3+1);
+        //Right or wrong?
+        if (firstAnswer == 2){
+            finalScore = finalScore + 1;
+        }
+        if (secondAnswer == 2){
+            finalScore = finalScore + 1;
+        }
+        if (thirdAnswer == 2){
+            finalScore = finalScore + 1;
+        }
+        if (fourthAnswer == 1){
+            finalScore = finalScore + 1;
+        }
+        if (fifthAnswer == randomNumber){
+            finalScore = finalScore + 1;
+        }
+        //Percentage
+        finalPercent = finalScore * 20;
+        resultLabel.setText(finalPercent + "%");
+    }//GEN-LAST:event_enterButtonActionPerformed
 
     /**
      * @param args the command line arguments
